@@ -49,6 +49,8 @@ export default {
         return
       }
       this.scroll = new BScroll(this.$refs.wrapper, {
+        scrollY: false,
+        scrollX: false,
         probeType: this.probeType,
         click: this.click
       })

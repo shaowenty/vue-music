@@ -67,39 +67,39 @@ export default new Router({
       //   }
       // ]
     }
-  //   {
-  //     path: '/singer',
-  //     component: Singer
-  //     // children: [
-  //     //   {
-  //     //     path: ':id',
-  //     //     component: SingerDetail
-  //     //   }
-  //     // ]
-  //   },
-  //   {
-  //     path: '/rank',
-  //     component: Rank
-  //     // children: [
-  //     //   {
-  //     //     path: ':id',
-  //     //     component: TopList
-  //     //   }
-  //     // ]
-  //   },
-  //   {
-  //     path: '/search',
-  //     component: Search
-  //     // children: [
-  //     //   {
-  //     //     path: ':id',
-  //     //     component: SingerDetail
-  //     //   }
-  //     // ]
-  //   }
-  //   // {
-  //   //   path: '/user',
-  //   //   component: UserCenter
-  //   // }
+    //   {
+    //     path: '/singer',
+    //     component: Singer
+    //     // children: [
+    //     //   {
+    //     //     path: ':id',
+    //     //     component: SingerDetail
+    //     //   }
+    //     // ]
+    //   },
+    //   {
+    //     path: '/rank',
+    //     component: Rank
+    //     // children: [
+    //     //   {
+    //     //     path: ':id',
+    //     //     component: TopList
+    //     //   }
+    //     // ]
+    //   },
+    //   {
+    //     path: '/search',
+    //     component: Search
+    //     // children: [
+    //     //   {
+    //     //     path: ':id',
+    //     //     component: SingerDetail
+    //     //   }
+    //     // ]
+    //   }
+    //   // {
+    //   //   path: '/user',
+    //   //   component: UserCenter
+    //   // }
   ]
 })

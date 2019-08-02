@@ -64,6 +64,7 @@ export default {
     }
   },
   created() {
+    console.log('created')
     this._getRecommend()
   },
   methods: {

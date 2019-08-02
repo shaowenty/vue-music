@@ -33,7 +33,7 @@ export default {
     },
     interval: {
       type: Number,
-      default: 2000
+      default: 4000
     }
   },
   data() {
@@ -43,13 +43,14 @@ export default {
     }
   },
   mounted() {
+    console.log('mounted')
     setTimeout(() => {
       this._setSliderWidth()
       this._initDots()
       this._initSlider()
-
       if (this.autoPlay) {
-        this._play()
+        if (this._timeout) clearTimeout(this._timeout)
+        this._timeout = setTimeout(this._play, this.interval)
       }
     }, 20)
 
@@ -62,6 +63,7 @@ export default {
     })
   },
   destroyed() {
+    console.log('destroyed')
     clearTimeout(this.timer)
   },
   methods: {
@@ -92,6 +94,7 @@ export default {
         let pageIndex = this.slider.getCurrentPage().pageX
         this.currentPageIndex = pageIndex
         if (this.autoPlay) {
+          if (this._timeout) clearTimeout(this._timeout)
           this._timeout = setTimeout(this._play, this.interval)
         }
       })
@@ -144,7 +147,7 @@ export default {
   }
 
   .dots {
-    position: absolute;
+    position: relative;
     right: 0;
     left: 0;
     bottom: 12px;
@@ -156,7 +159,7 @@ export default {
       margin: 0 4px;
       width: 8px;
       height: 8px;
-      border-radius: 50%;
+      border-radius: 100%;
       background: $color-text-l;
 
       &.active {
